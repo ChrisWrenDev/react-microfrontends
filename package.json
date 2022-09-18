@@ -1,0 +1,28 @@
+{
+  "name": "cef-monorepo",
+  "version": "1.0.0",
+  "description": "CEF Micro-Frontend Monorepo Using Webpack Module Federation",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "shared-libraries",
+      "ui-components",
+      "cef-uk"
+    ]
+  },
+  "scripts": {
+    "start": "concurrently \"cd ./ui-components && yarn start\" \"cd ./shared-libraries && yarn start\" \"cd ./cef-uk && yarn start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://www.cef.co.uk/"
+  },
+  "homepage": "https://www.cef.co.uk/",
+  "devDependencies": {
+    "concurrently": "7.3.0",
+    "lerna": "^5.5.1"
+  }
+}
