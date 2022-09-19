@@ -24,7 +24,7 @@ It is a pure host.
 
 # how to use
 
-- `yarn global add lerna`
+- `yarn global add lerna` && `yarn global add concurrently`
 - `yarn install`
 - `lerna init`
 - `lerna bootstrap (note: remove npx)`
