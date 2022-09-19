@@ -11,7 +11,7 @@ function App() {
       <div className="container">
         <div className="navbar">
           <div className="logo">
-            <a href="index.html">CEF UK</a>
+            <a href="index.html">CEF AU</a>
           </div>
           <nav>
             <ul id="MenuItems">
@@ -48,7 +48,7 @@ function App() {
           />
         </div>
       </div>
-      {/* Products  */}
+      {/* Products */}
       <Products />
       {/* Footer */}
       <div className="footer">
@@ -92,7 +92,7 @@ function App() {
             </div>
           </div>
           <hr />
-          <p className="copyright">Copyright &copy; 2021 - CEF UK</p>
+          <p className="copyright">Copyright &copy; 2021 - CEF AU</p>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   devtool: "hidden-source-map",
   output: {
-    publicPath: "http://localhost:3002/",
+    publicPath: "http://localhost:3004/",
     clean: true,
   },
   resolve: {
@@ -28,6 +28,10 @@ module.exports = {
         loader: "url-loader",
       },
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -39,12 +43,14 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "cef_uk",
+      name: "products",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Products": "./src/Products.jsx",
+      },
       remotes: {
         "shared-libraries":
           "shared_libraries@http://localhost:3000/remoteEntry.js",
-        products: "products@http://localhost:3004/remoteEntry.js",
-        // "ui-components": "ui_components@http://localhost:3001/remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({

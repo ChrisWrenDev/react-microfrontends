@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   devtool: "hidden-source-map",
   output: {
-    publicPath: "http://localhost:3002/",
+    publicPath: "http://localhost:3003/",
     clean: true,
   },
   resolve: {
@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "cef_uk",
+      name: "cef_au",
       remotes: {
         "shared-libraries":
           "shared_libraries@http://localhost:3000/remoteEntry.js",

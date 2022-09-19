@@ -1,29 +1,7 @@
+var products;
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "webpack/container/reference/products":
-/*!****************************************************************!*\
-  !*** external "products@http://localhost:3004/remoteEntry.js" ***!
-  \****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-var __webpack_error__ = new Error();
-module.exports = new Promise((resolve, reject) => {
-	if(typeof products !== "undefined") return resolve();
-	__webpack_require__.l("http://localhost:3004/remoteEntry.js", (event) => {
-		if(typeof products !== "undefined") return resolve();
-		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-		var realSrc = event && event.target && event.target.src;
-		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
-		__webpack_error__.name = 'ScriptExternalLoadError';
-		__webpack_error__.type = errorType;
-		__webpack_error__.request = realSrc;
-		reject(__webpack_error__);
-	}, "products");
-}).then(() => (products));
-
-/***/ }),
 
 /***/ "webpack/container/reference/shared-libraries":
 /*!************************************************************************!*\
@@ -31,7 +9,6 @@ module.exports = new Promise((resolve, reject) => {
   \************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof shared_libraries !== "undefined") return resolve();
@@ -63,7 +40,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -133,7 +110,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "cef-uk:";
+/******/ 		var dataWebpackPrefix = "products:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -190,26 +167,14 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/remotes loading */
 /******/ 	(() => {
 /******/ 		var chunkMapping = {
-/******/ 			"bootstrap_js": [
-/******/ 				"webpack/container/remote/shared-libraries/react",
-/******/ 				"webpack/container/remote/products/Products",
-/******/ 				"webpack/container/remote/shared-libraries/react-dom"
+/******/ 			"src_Products_jsx": [
+/******/ 				"webpack/container/remote/shared-libraries/react"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
 /******/ 			"webpack/container/remote/shared-libraries/react": [
 /******/ 				"default",
 /******/ 				"./react",
-/******/ 				"webpack/container/reference/shared-libraries"
-/******/ 			],
-/******/ 			"webpack/container/remote/products/Products": [
-/******/ 				"default",
-/******/ 				"./Products",
-/******/ 				"webpack/container/reference/products"
-/******/ 			],
-/******/ 			"webpack/container/remote/shared-libraries/react-dom": [
-/******/ 				"default",
-/******/ 				"./react-dom",
 /******/ 				"webpack/container/reference/shared-libraries"
 /******/ 			]
 /******/ 		};
@@ -277,7 +242,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			// runs all init snippets from all modules reachable
 /******/ 			var scope = __webpack_require__.S[name];
 /******/ 			var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 			var uniqueName = "cef-uk";
+/******/ 			var uniqueName = "products";
 /******/ 			var register = (name, version, factory, eager) => {
 /******/ 				var versions = scope[name] = scope[name] || {};
 /******/ 				var activeVersion = versions[version];
@@ -297,7 +262,6 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					initExternal("webpack/container/reference/products");
 /******/ 					initExternal("webpack/container/reference/shared-libraries");
 /******/ 				}
 /******/ 				break;
@@ -309,7 +273,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "http://localhost:3002/";
+/******/ 		__webpack_require__.p = "http://localhost:3004/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
@@ -320,7 +284,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"main": 0
+/******/ 			"products": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -397,20 +361,57 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkcef_uk"] = self["webpackChunkcef_uk"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkproducts"] = self["webpackChunkproducts"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-__webpack_require__.e(/*! import() */ "bootstrap_js").then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap.js */ "./bootstrap.js"));
+var exports = __webpack_exports__;
+/*!***********************!*\
+  !*** container entry ***!
+  \***********************/
+var moduleMap = {
+	"./Products": () => {
+		return __webpack_require__.e("src_Products_jsx").then(() => (() => ((__webpack_require__(/*! ./src/Products.jsx */ "./src/Products.jsx")))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope) => {
+	if (!__webpack_require__.S) return;
+	var name = "default"
+	var oldScope = __webpack_require__.S[name];
+	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
+	__webpack_require__.S[name] = shareScope;
+	return __webpack_require__.I(name, initScope);
+};
+
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
 })();
 
+products = __webpack_exports__;
 /******/ })()
 ;

@@ -8,11 +8,13 @@
     "packages": [
       "shared-libraries",
       "ui-components",
-      "cef-uk"
+      "products",
+      "cef-uk",
+      "cef-au"
     ]
   },
   "scripts": {
-    "start": "concurrently \"cd ./ui-components && yarn start\" \"cd ./shared-libraries && yarn start\" \"cd ./cef-uk && yarn start\""
+    "start": "concurrently \"cd ./ui-components && yarn start\" \"cd ./shared-libraries && yarn start\" \"cd ./products && yarn start\" \"cd ./cef-uk && yarn start\" \"cd ./cef-au && yarn start\""
   },
   "keywords": [],
   "author": "",

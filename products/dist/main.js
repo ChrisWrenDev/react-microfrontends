@@ -1,30 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "webpack/container/reference/products":
-/*!****************************************************************!*\
-  !*** external "products@http://localhost:3004/remoteEntry.js" ***!
-  \****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-var __webpack_error__ = new Error();
-module.exports = new Promise((resolve, reject) => {
-	if(typeof products !== "undefined") return resolve();
-	__webpack_require__.l("http://localhost:3004/remoteEntry.js", (event) => {
-		if(typeof products !== "undefined") return resolve();
-		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-		var realSrc = event && event.target && event.target.src;
-		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
-		__webpack_error__.name = 'ScriptExternalLoadError';
-		__webpack_error__.type = errorType;
-		__webpack_error__.request = realSrc;
-		reject(__webpack_error__);
-	}, "products");
-}).then(() => (products));
-
-/***/ }),
-
 /***/ "webpack/container/reference/shared-libraries":
 /*!************************************************************************!*\
   !*** external "shared_libraries@http://localhost:3000/remoteEntry.js" ***!
@@ -63,7 +39,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -133,7 +109,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "cef-uk:";
+/******/ 		var dataWebpackPrefix = "products:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -190,9 +166,10 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/remotes loading */
 /******/ 	(() => {
 /******/ 		var chunkMapping = {
+/******/ 			"src_Products_jsx": [
+/******/ 				"webpack/container/remote/shared-libraries/react"
+/******/ 			],
 /******/ 			"bootstrap_js": [
-/******/ 				"webpack/container/remote/shared-libraries/react",
-/******/ 				"webpack/container/remote/products/Products",
 /******/ 				"webpack/container/remote/shared-libraries/react-dom"
 /******/ 			]
 /******/ 		};
@@ -201,11 +178,6 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				"default",
 /******/ 				"./react",
 /******/ 				"webpack/container/reference/shared-libraries"
-/******/ 			],
-/******/ 			"webpack/container/remote/products/Products": [
-/******/ 				"default",
-/******/ 				"./Products",
-/******/ 				"webpack/container/reference/products"
 /******/ 			],
 /******/ 			"webpack/container/remote/shared-libraries/react-dom": [
 /******/ 				"default",
@@ -277,7 +249,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			// runs all init snippets from all modules reachable
 /******/ 			var scope = __webpack_require__.S[name];
 /******/ 			var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 			var uniqueName = "cef-uk";
+/******/ 			var uniqueName = "products";
 /******/ 			var register = (name, version, factory, eager) => {
 /******/ 				var versions = scope[name] = scope[name] || {};
 /******/ 				var activeVersion = versions[version];
@@ -297,7 +269,6 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					initExternal("webpack/container/reference/products");
 /******/ 					initExternal("webpack/container/reference/shared-libraries");
 /******/ 				}
 /******/ 				break;
@@ -309,7 +280,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "http://localhost:3002/";
+/******/ 		__webpack_require__.p = "http://localhost:3004/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
@@ -397,9 +368,14 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkcef_uk"] = self["webpackChunkcef_uk"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkproducts"] = self["webpackChunkproducts"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -409,7 +385,7 @@ var __webpack_exports__ = {};
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-__webpack_require__.e(/*! import() */ "bootstrap_js").then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap.js */ "./bootstrap.js"));
+Promise.all(/*! import() */[__webpack_require__.e("src_Products_jsx"), __webpack_require__.e("bootstrap_js")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap.js */ "./bootstrap.js"));
 })();
 
 /******/ })()
