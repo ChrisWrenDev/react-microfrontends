@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkcef_uk"] = self["webpackChunkcef_uk"] || []).push([["bootstrap_js"],{
+(self["webpackChunkstore_uk"] = self["webpackChunkstore_uk"] || []).push([["bootstrap_js"],{
 
 /***/ "./App.jsx":
 /*!*****************!*\
@@ -30,7 +30,7 @@ function App() {
     className: "logo"
   }, /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "index.html"
-  }, "CEF UK")), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+  }, "STORE UK")), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     id: "MenuItems"
   }, /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "index.html"
@@ -81,7 +81,7 @@ function App() {
     className: "footer-col-4"
   }, /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Follow us"), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Facebook"), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Twitter"), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Instagram"), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "YouTube")))), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null), /*#__PURE__*/shared_libraries_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "copyright"
-  }, "Copyright \xA9 2021 - CEF UK"))));
+  }, "Copyright \xA9 2021 - STORE UK"))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);

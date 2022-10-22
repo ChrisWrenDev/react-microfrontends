@@ -1,4 +1,4 @@
-# CEF Monorepo Microfrontends
+# Monorepo Microfrontends
 
 A complete Webpack Module Federation Case with React.
 
@@ -12,11 +12,11 @@ It is a pure `remote`
 
 ## ui-components
 
-It is a middle-level app, which depends on modules exposed from `shared-libraries` : `react` ,`react-dom`. In the meantime, it also exposes components: `Dialog`, `Button` to another app called `cef-uk`.
+It is a middle-level app, which depends on modules exposed from `shared-libraries` : `react` ,`react-dom`. In the meantime, it also exposes components: `Dialog`, `Button` to another app called `store-uk`.
 
 It is both host and remote.
 
-## cef-uk
+## store-uk
 
 the top-level app, which depends on `shared-libraries` and `ui-components`.
 

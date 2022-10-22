@@ -1,7 +1,7 @@
 {
-  "name": "cef-monorepo",
+  "name": "react-microfrontend",
   "version": "1.0.0",
-  "description": "CEF Micro-Frontend Monorepo Using Webpack Module Federation",
+  "description": "Micro-Frontend Monorepo Using Webpack Module Federation",
   "main": "index.js",
   "private": true,
   "workspaces": {
@@ -9,20 +9,20 @@
       "shared-libraries",
       "ui-components",
       "products",
-      "cef-uk",
-      "cef-au"
+      "store-uk",
+      "store-au"
     ]
   },
   "scripts": {
-    "start": "concurrently \"cd ./ui-components && yarn start\" \"cd ./shared-libraries && yarn start\" \"cd ./products && yarn start\" \"cd ./cef-uk && yarn start\" \"cd ./cef-au && yarn start\""
+    "start": "concurrently \"cd ./ui-components && yarn start\" \"cd ./shared-libraries && yarn start\" \"cd ./products && yarn start\" \"cd ./store-uk && yarn start\" \"cd ./store-au && yarn start\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://www.cef.co.uk/"
+    "url": ""
   },
-  "homepage": "https://www.cef.co.uk/",
+  "homepage": "",
   "devDependencies": {
     "concurrently": "7.3.0",
     "lerna": "^5.5.1"

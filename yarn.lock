@@ -1890,14 +1890,6 @@
   "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001402.tgz"
   "version" "1.0.30001402"
 
-"cef-au@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\cef-monorepo\\cef-au":
-  "resolved" "file:cef-au"
-  "version" "1.0.0"
-
-"cef-uk@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\cef-monorepo\\cef-uk":
-  "resolved" "file:cef-uk"
-  "version" "1.0.0"
-
 "chalk@^2.0.0":
   "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz"
@@ -4612,7 +4604,7 @@
   "resolved" "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
   "version" "2.0.1"
 
-"products@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\cef-monorepo\\products":
+"products@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\react-microfrontends\\products":
   "resolved" "file:products"
   "version" "1.0.0"
   dependencies:
@@ -5095,7 +5087,7 @@
   dependencies:
     "kind-of" "^6.0.2"
 
-"shared-libraries@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\cef-monorepo\\shared-libraries":
+"shared-libraries@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\react-microfrontends\\shared-libraries":
   "resolved" "file:shared-libraries"
   "version" "1.0.0"
   dependencies:
@@ -5246,6 +5238,14 @@
   "version" "9.0.1"
   dependencies:
     "minipass" "^3.1.1"
+
+"store-au@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\react-microfrontends\\store-au":
+  "resolved" "file:store-au"
+  "version" "1.0.0"
+
+"store-uk@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\react-microfrontends\\store-uk":
+  "resolved" "file:store-uk"
+  "version" "1.0.0"
 
 "string_decoder@^1.1.1":
   "integrity" "sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA=="
@@ -5548,7 +5548,7 @@
   "resolved" "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.0.tgz"
   "version" "3.17.0"
 
-"ui-components@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\cef-monorepo\\ui-components":
+"ui-components@file:C:\\Users\\cwren\\Documents\\2. Web Development\\0. Projects\\react-microfrontends\\ui-components":
   "resolved" "file:ui-components"
   "version" "1.0.0"
   dependencies:

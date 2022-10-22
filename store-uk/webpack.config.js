@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "cef_uk",
+      name: "store_uk",
       remotes: {
         "shared-libraries":
           "shared_libraries@http://localhost:3000/remoteEntry.js",
